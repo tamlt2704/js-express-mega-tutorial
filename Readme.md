@@ -54,4 +54,18 @@
 
     # now start server with following command
     export PORT=9999 && npm start
+    
+    1.2.3 use dotenv
+    # install package
+        npm install -save dotenv
+    # add following to app
+        require('dotenv').config()
 
+    # .env content
+        PORT=5000
+        APP_NAME='expressjs flask mega tutorial'
+
+    !!! we might see that the app start with port 9999, not port 5000 defined in env. 
+    It's because it will skip any variables that already have been set.
+
+    
