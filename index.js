@@ -14,6 +14,7 @@ app.engine('handlebars', expressHandlebars({
 app.set('view engine', 'handlebars')
 
 app.get('/', routers.home)
+app.get('/about', routers.about)
 app.use(routers.pagenotfound)
 app.use(routers.servererror)
 
