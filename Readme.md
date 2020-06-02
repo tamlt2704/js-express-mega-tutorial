@@ -87,4 +87,10 @@
         app.get('/', routers.home)
         app.use(routers.pagenotfound)
         app.use(routers.servererror)
-
+    
+    1.2.7 linting
+        npm install -g eslint
+        eslint --init           # choose default
+        npm run lint
+        
+    
