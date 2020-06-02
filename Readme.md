@@ -31,6 +31,7 @@
     curl localhost:5000         # or paste this link to browser
 
 1.2 Code refactor
+    1.2.1  Change command to start server
     # edit package.json
     ...... 
     {
@@ -43,3 +44,14 @@
 
     # now start server with following command
     npm start
+    
+    1.2.2 use default port
+    Change following in index.js
+
+        const PORT = process.env.PORT || 5000
+        .....
+        app.listen(PORT, () => console.log(`Example app running at http://localhost:${PORT}`))
+
+    # now start server with following command
+    export PORT=9999 && npm start
+
