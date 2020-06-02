@@ -82,3 +82,9 @@
 
         const routers = require('./lib/router.js');
         app.get('/', routers.home)
+
+    1.2.6 add custom page not found and internal server
+        app.get('/', routers.home)
+        app.use(routers.pagenotfound)
+        app.use(routers.servererror)
+

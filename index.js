@@ -10,5 +10,8 @@ const routers = require('./lib/router.js');
 
 
 app.get('/', routers.home)
+app.use(routers.pagenotfound)
+app.use(routers.servererror)
+
 
 app.listen(PORT, () => console.log(`Example app running at http://localhost:${PORT}`))
