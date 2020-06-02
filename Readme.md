@@ -67,5 +67,14 @@
 
     !!! we might see that the app start with port 9999, not port 5000 defined in env. 
     It's because it will skip any variables that already have been set.
-
+    
+    1.2.4 restart app with code change
+    npm install nodemon
+    
+    {
+        "scripts": {
+            "start": "nodemon index.js",                                           <--- Add this line 
+            "test": "echo \"Error: no test specified\" && exit 1"
+        },
+    }
     
