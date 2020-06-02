@@ -7,7 +7,11 @@ const app = express()
 const PORT = process.env.PORT || 5000
 
 const routers = require('./lib/router.js');
-
+const expressHandlebars = require('express-handlebars')
+app.engine('handlebars', expressHandlebars({
+    defaultLayout: 'main',
+}))
+app.set('view engine', 'handlebars')
 
 app.get('/', routers.home)
 app.use(routers.pagenotfound)

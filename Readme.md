@@ -94,3 +94,7 @@
         npm run lint
         
     
+2. Template with handlerbars
+    2.1 setup
+    # install dependencies
+    npm install express-handlebars
