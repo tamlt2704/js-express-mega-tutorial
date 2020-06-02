@@ -78,3 +78,7 @@
         },
     }
     
+    1.2.5 move router to lib/routers.js
+
+        const routers = require('./lib/router.js');
+        app.get('/', routers.home)
