@@ -30,3 +30,16 @@
     # check if the code is working
     curl localhost:5000         # or paste this link to browser
 
+1.2 Code refactor
+    # edit package.json
+    ...... 
+    {
+        "scripts": {
+            "start": "node index.js",                                           <--- Add this line 
+            "test": "echo \"Error: no test specified\" && exit 1"
+        },
+    }
+    .......
+
+    # now start server with following command
+    npm start
