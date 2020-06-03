@@ -103,4 +103,14 @@
     npm install express-form
     npm install body-parser
     npm install csurf cookie-parser
+    TODO: learn how to attack without csurf
     npm install express-session 
+    use session to implement flash
+
+4. Persistence
+   npm install --save mongoose 
+   npm install --save bcrypt
+   passport
+    npm install passport
+    npm install passport-local-mongoose
+    npm install connect-ensure-login
