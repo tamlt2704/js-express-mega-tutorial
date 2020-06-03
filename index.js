@@ -25,6 +25,13 @@ const csrfMiddleware = csurf({
 app.use(cookieParser(process.env.COOKIE_SECRET))
 app.use(csrfMiddleware)
 
+app.use(require('express-session')({
+    resave: false,
+    saveUninitialized: false,
+    secret: process.env.COOKIE_SECRET
+}))
+app.use(routers.flashMiddleware)
+
 app.get('/', routers.home)
 app.get('/about', routers.about)
 app.get('/login', csrfMiddleware, routers.login)
