@@ -22,14 +22,15 @@ app.use(bodyParser.urlencoded({extended:true}))
 const csrfMiddleware = csurf({
     cookie: true
 })
-app.use(cookieParser())
+app.use(cookieParser(process.env.COOKIE_SECRET))
 app.use(csrfMiddleware)
 
 app.get('/', routers.home)
 app.get('/about', routers.about)
-app.get('/login', routers.login)
+app.get('/login', csrfMiddleware, routers.login)
 app.post(
     '/login', 
+    csrfMiddleware,
     form(
         form.field("username").trim().required().is(/^[a-z]+$/),
         form.field("password").trim().required().is(/^[a-z]+$/),
