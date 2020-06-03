@@ -98,3 +98,7 @@
     2.1 setup
     # install dependencies
     npm install express-handlebars
+
+3. Handle form
+    npm install express-form
+    npm install body-parser
