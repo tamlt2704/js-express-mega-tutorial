@@ -30,7 +30,7 @@
     "express-form": "^0.12.6",
     "express-handlebars": "^4.0.4",
     "express-session": "^1.17.1",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "mongoose": "^5.9.17",
     "nodemon": "^2.0.4",
     "passport": "^0.4.1",
